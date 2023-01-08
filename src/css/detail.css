@@ -1,0 +1,61 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.mainLayout {
+	display: flex;
+	flex-direction: column;
+}
+
+.imgLayout {
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+	margin: 0;
+}
+
+.infoLayout {
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+	margin-bottom: 0;
+}
+
+.genreLayout {
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.genreLayout h3 {
+	margin-right: 5px;
+}
+
+.titleLayout {
+	margin-bottom: 5px;
+}
+
+img {
+	width: 50%
+}
+
+.titleLayout h1,
+.titleLayout h3 {
+	display: inline;
+}
+
+.titleLayout h3 {
+	margin-left: 5px;
+}
+
+.ratingLayout h3 {
+	display: flex;
+}
+
+.ratingLayout h3 p {
+	color: grey;
+}
+
+.descriptionLayout {
+	margin: 10px;
+}
