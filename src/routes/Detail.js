@@ -22,9 +22,7 @@ function Detail() {
         const json = await (await fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}`)).json();
         const movie = json.data.movie;
         setMovieInfo(movie);
-
         setLoading(false);
-        console.log("json.data.movie: ", movie);
     }, [id]);
     useEffect(() => {
         getMovieInfo();
@@ -34,11 +32,17 @@ function Detail() {
         <h1>Loading...</h1>
     ) : (
         <div className="mainLayout">
-            <button onClick={() => navigate(-1)}>Go back</button>
+            <button
+                className="backButton"
+                onClick={() => navigate(-1)}
+            >
+                Go back
+            </button>
             {/* 당연하듯이 map을 이용하려고 했지만 되지 않고 끙끙대다가
             다시 생각해 보니 리스트가 아닌데 왜 써야 하지 하면서 지우니 잘 됐다... */}
             <div className="imgLayout">
                 <img
+                    className="mainImage"
                     src={movieInfo.large_cover_image}
                     alt={movieInfo.title + "'s thumbnail."}
                     title={movieInfo.title}
@@ -58,6 +62,13 @@ function Detail() {
                         <h3>
                             ⭐️ {movieInfo.rating} / 10.0 &nbsp;<p>&lt;{movieInfo.language}&gt;</p>
                         </h3>
+                        <a href={"https://www.imdb.com/title/" + movieInfo.imdb_code}>
+                            <img
+                                className="imdbImage"
+                                src="../css/imdb.png"
+                                alt="imdb"
+                            />
+                        </a>
                     </div>
                     {/* <h7>language: {movieInfo.language}</h7> */}
                 </div>

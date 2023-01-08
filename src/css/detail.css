@@ -35,7 +35,7 @@
 	margin-bottom: 5px;
 }
 
-img {
+.imgLayout .mainImage {
 	width: 50%
 }
 
@@ -58,4 +58,17 @@ img {
 
 .descriptionLayout {
 	margin: 10px;
+}
+
+.backButton {
+	margin-top: 8px;
+	margin-left: 8px;
+	background-color: aquamarine;
+	width: 20%;
+	height: 40px;
+}
+
+.imdbImage {
+	width: 100px;
+	height: 100px;
 }
