@@ -1,6 +1,6 @@
 import "../css/detail.css";
 
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useCallback, useEffect, useState } from "react";
 
 // const getMovieList = async () => {
@@ -14,6 +14,8 @@ import { useCallback, useEffect, useState } from "react";
 
 function Detail() {
     const { id } = useParams();
+    const navigate = useNavigate();
+
     const [loading, setLoading] = useState(true);
     const [movieInfo, setMovieInfo] = useState([]);
     const getMovieInfo = useCallback(async () => {
@@ -32,6 +34,7 @@ function Detail() {
         <h1>Loading...</h1>
     ) : (
         <div className="mainLayout">
+            <button onClick={() => navigate(-1)}>Go back</button>
             {/* 당연하듯이 map을 이용하려고 했지만 되지 않고 끙끙대다가
             다시 생각해 보니 리스트가 아닌데 왜 써야 하지 하면서 지우니 잘 됐다... */}
             <div className="imgLayout">
