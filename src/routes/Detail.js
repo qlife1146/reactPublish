@@ -62,10 +62,14 @@ function Detail() {
                         <h3>
                             ⭐️ {movieInfo.rating} / 10.0 &nbsp;<p>&lt;{movieInfo.language}&gt;</p>
                         </h3>
-                        <a href={"https://www.imdb.com/title/" + movieInfo.imdb_code}>
+                        <a
+                            href={"https://www.imdb.com/title/" + movieInfo.imdb_code}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <img
                                 className="imdbImage"
-                                src="../css/imdb.png"
+                                src="src/css/imdb.png"
                                 alt="imdb"
                             />
                         </a>
