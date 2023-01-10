@@ -6,7 +6,7 @@ module.exports = {
     entry: "./src/",
     output: {
         path: path.resolve(__dirname, "/src/"),
-        filename: "[name].[chunkhash:8].jsc",
+        filename: "[name].[chunkhash:8].js",
     },
     module: {
         rules: [
