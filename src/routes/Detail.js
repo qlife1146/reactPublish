@@ -69,7 +69,7 @@ function Detail() {
                         >
                             <img
                                 className="imdbImage"
-                                src="src/css/imdb.png"
+                                src="../css/imdb.png"
                                 alt="imdb"
                             />
                         </a>
